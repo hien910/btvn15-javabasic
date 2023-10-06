@@ -139,6 +139,7 @@ public class TimekeepingLogic {
                 return o1.getIdMin() - o2.getIdMin();
             }
         });
+        showTimekeeping();
     }
 
     public void salary() {
@@ -158,9 +159,7 @@ public class TimekeepingLogic {
                     * timekeeping.getWorker().getHeSoBac() ;
             System.out.println("lương tháng của công nhân có id: "+timekeeping.getWorker().getId()+" là: "+ sum);
         }
-
     }
-
     private Factory inputFactory() {
         int idFac;
         Factory factory;
