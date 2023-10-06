@@ -6,6 +6,21 @@ public class Timekeeping {
     private Worker worker;
     private List<Detail> detailList;
     private int totalWorkDay;
+    private int idMin;
+
+    public int getIdMin() {
+        return idMin;
+    }
+
+    public void setIdMin() {
+        int idMin1 =0;
+        for (int i = 0; i < detailList.size(); i++) {
+            if (idMin1 < detailList.get(i).getFactory().getId()){
+                idMin1 =detailList.get(i).getFactory().getId();
+            }
+        }
+        this.idMin=idMin1;
+    }
 
     public Timekeeping(Worker worker, List<Detail> detailList, int totalWorkDay) {
         this.worker = worker;

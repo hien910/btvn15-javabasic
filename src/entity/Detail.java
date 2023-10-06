@@ -4,6 +4,8 @@ public class Detail {
     private Factory factory;
     private int workDay;
 
+
+
     public Detail(Factory factory, int numWorkDay) {
         this.factory=factory;
         this.workDay =numWorkDay;

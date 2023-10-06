@@ -136,8 +136,7 @@ public class TimekeepingLogic {
         Collections.sort(timekeepingLists, new Comparator<Timekeeping>() {
             @Override
             public int compare(Timekeeping o1, Timekeeping o2) {
-                return 0;
-//                        o1.getFactory().get(1).getId();
+                return o1.getIdMin() - o2.getIdMin();
             }
         });
     }
@@ -154,7 +153,6 @@ public class TimekeepingLogic {
             List<Detail> detailList = timekeeping.getDetail();
             for (int j = 0; j < detailList.size(); j++) {
                 sum = sum+ detailList.get(j).getFactory().getCoefficient();
-
             }
             sum = a * sum * (double) timekeeping.getTotalWorkDay()/22.0
                     * timekeeping.getWorker().getHeSoBac() ;
